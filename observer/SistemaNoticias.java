@@ -7,19 +7,19 @@ public class SistemaNoticias {
         List<Observer> lista = assinantes.get(categoria);
 
         if (lista == null) {
-            // Se ainda não existe lista pra essa categoria, cria uma nova
+            
             lista = new ArrayList<>();
-            assinantes.put(categoria, lista); // só aqui precisa do put para adicionar a lista
+            assinantes.put(categoria, lista); 
         }
 
-        lista.add(o); // adiciona o observador na lista
+        lista.add(o); 
     }
 
     public void desinscrever(String categoria, Observer o) {
         List<Observer> lista = assinantes.get(categoria);
 
         if (lista != null) {
-            lista.remove(o); // remove o observador da lista
+            lista.remove(o); 
         }
     }
 
